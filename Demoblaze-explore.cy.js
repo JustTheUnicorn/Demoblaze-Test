@@ -16,5 +16,11 @@ describe('template spec', () => {
   .wait(2000)
   cy.get('[onclick="byCat(\'notebook\')"]').click();
 
+  cy.get('.carousel-control-next').click();
+
+  cy.get('#fotcont > :nth-child(1)').contains('About Us').should('be.visible');
+
+  cy.get('.col-sm-3').contains('Get in Touch').should('be.visible');
+
   })
 })
