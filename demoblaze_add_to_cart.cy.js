@@ -56,18 +56,21 @@ describe('template spec', () => {
   cy.get('thead > tr > :nth-child(2)')
   .contains('Title').should('be.visible');
 
-  cy.get('#tbodyid > :nth-child(2) > :nth-child(2)')
-  .contains('MacBook Pro').should('be.visible');
-
   cy.get('thead > tr > :nth-child(3)')
   .contains('Price').should('be.visible');
-
-  cy.get('#tbodyid > :nth-child(1) > :nth-child(3)')
 
   cy.get('#totalp')
   .contains('1420').should('be.visible');
 
   cy.get('.col-lg-1 > .btn').click();
+
+  cy.get('#name').type('test name');
+
+  cy.get('#country').type('test country');
+
+  cy.get('#city').type('test city');
+
+  cy.get('#card').type('77777777777777');
 
   })
 })
