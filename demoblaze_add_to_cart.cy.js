@@ -72,5 +72,19 @@ describe('template spec', () => {
 
   cy.get('#card').type('77777777777777');
 
+  cy.get('#month').type('07/07/07');
+
+  cy.get('#year').type('7007');
+
+  cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+  .wait(2000);
+
+  cy.get('.sweet-alert > h2')
+  .contains('Thank you for your purchase').should('be.visible');
+
+  cy.get('.sweet-alert')
+  .contains('Id')
+  .should('be.visible');
+
   })
 })
