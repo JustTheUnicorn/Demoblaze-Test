@@ -86,5 +86,7 @@ describe('template spec', () => {
   .contains('Id')
   .should('be.visible');
 
+  cy.get('.confirm').click();
+
   })
 })
