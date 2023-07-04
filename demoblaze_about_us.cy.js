@@ -8,5 +8,14 @@ describe('template spec', () => {
 
   cy.get(':nth-child(3) > .nav-link').click();
 
+  cy.get('#videoModalLabel')
+  .contains('About us').should('be.visible');
+
+  cy.get('#videoModal > .modal-dialog > .modal-content > .modal-header > .close > span')
+  .should('be.visible');
+
+  cy.get('#videoModal > .modal-dialog > .modal-content > .modal-footer > .btn')
+  .should('be.visible');
+  
   })
 })
